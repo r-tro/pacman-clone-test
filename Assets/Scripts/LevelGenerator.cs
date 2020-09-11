@@ -42,16 +42,26 @@ public class LevelGenerator : MonoBehaviour
 
     public void LevelMap()
     {
-        for (int i = 0; i < 13; i++) // x - 14 tiles across
+        for (int i = 0; i < 15; i++) // rows
         {
-            for (int j = 0; j < 14; j++) // y - 15 tiles down
+            for (int j = 0; j < 14; j++) // columns
             {
+                //Debug.Log("prefab" + prefab + " + tile " +tile);            
                 GameObject prefab = Resources.Load("tile_" + levelMap[i, j].ToString()) as GameObject;
                 GameObject tile = Instantiate(prefab, Vector3.zero, Quaternion.identity) as GameObject;
-                Debug.Log("prefab" + prefab + " + tile " +tile);
                 tile.transform.position = new Vector3(StartPoint.x + (TileSize * j), StartPoint.y - (TileSize * i), 0);
+                if(i >= 1 && j < 14)
+                {
+                    if (levelMap[i, j] == 1 && levelMap[i, j + 1] == 2 && levelMap[i - 1, j] == 2) // bottom left corner piece
+                    {
+                        tile.transform.Rotate(0f, 0f, 90f);
+                    }
+                }
             }
         }
     }
+
+
+
 
 }
