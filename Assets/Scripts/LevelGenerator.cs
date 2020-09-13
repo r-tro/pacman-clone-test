@@ -192,14 +192,14 @@ public class LevelGenerator : MonoBehaviour
                             tileTopLeft.transform.Rotate(0f, 0f, 90f);
                             tileTopRight.transform.Rotate(0f, 0f, 90f);
                             tileBottomRight.transform.Rotate(0f, 0f, 90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 90f); //
+                            tileBottomLeft.transform.Rotate(0f, 0f, 90f); 
                         }
                         if (levelMap[i, j] == 4 && (i == 8 || i == 7 || i == 11 || i == 12) && j == 8) // Vertical Inside Wall (out of bounds manual adjustment)
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, -90f);
                             tileTopRight.transform.Rotate(0f, 0f, -90f);
                             tileBottomRight.transform.Rotate(0f, 0f, -90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, -90f); //
+                            tileBottomLeft.transform.Rotate(0f, 0f, -90f); 
                         }
                     }
                 }
