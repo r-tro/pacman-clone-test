@@ -348,6 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179656226}
   - component: {fileID: 1179656227}
+  - component: {fileID: 1179656228}
   m_Layer: 0
   m_Name: Pacman
   m_TagString: Player
@@ -405,10 +406,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1398638611
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ab1f82c1ace97e4fad649d6fca4446a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5f61d9bf87df074b9da78065109d527, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -419,6 +420,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1179656228
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179656225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a574eb4d36e385249860e2bd114a840c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1321406745
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,9 +577,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498442294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4bf70eeb9a2b14c8627bb8995a6e30, type: 3}
+  m_Script: {fileID: 11500000, guid: 36054d2b299e544469d4b1fccb63a117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 1179656225}
 --- !u!114 &1498442296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,11 +590,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498442294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d6e25aa611b080419813640cbca2d11, type: 3}
+  m_Script: {fileID: 11500000, guid: cd4bf70eeb9a2b14c8627bb8995a6e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1179656225}
-  speed: 1
 --- !u!4 &1498442297
 Transform:
   m_ObjectHideFlags: 0
@@ -600,7 +619,7 @@ GameObject:
   - component: {fileID: 2083629485}
   m_Layer: 0
   m_Name: Level
-  m_TagString: Untagged
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,7 +632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083629483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1330627429}
