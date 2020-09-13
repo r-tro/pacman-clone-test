@@ -36,16 +36,16 @@ public class InputManager : MonoBehaviour
         while (InputUsed == false)
         {
             //Debug.Log("looping");
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 0.0f, item.transform.localPosition.y - 1.18f, item.transform.localPosition.z + 0.0f), 1f);
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 0.0f, item.transform.localPosition.y - 4.0f, item.transform.localPosition.z + 0.0f), 1f);
             yield return new WaitForSeconds(1.01f); //adjusted 0.1 longer than lerp time as float isn't accurate
             //Debug.Log("looping2");
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 3.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 2f);
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 11.0f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 2f);
             yield return new WaitForSeconds(2.01f);
             //Debug.Log("looping3");
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 0.0f, item.transform.localPosition.y + 1.18f, item.transform.localPosition.z + 0.0f), 1f);
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 0.0f, item.transform.localPosition.y  + 4.0f, item.transform.localPosition.z + 0.0f), 1f);
             yield return new WaitForSeconds(1.01f);
             //Debug.Log("looping4");
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 3.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 2f);
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 11.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 2f);
             yield return new WaitForSeconds(2.01f);
             //Debug.Log("looping5");
             yield return null;
