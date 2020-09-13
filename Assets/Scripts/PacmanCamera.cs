@@ -22,4 +22,4 @@ public class PacmanCamera : MonoBehaviour
         temp.y = playerTransform.position.y;
         transform.position = temp;
     }
-}
+} 
