@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tile0
+  - Tile1
+  - Tile2
+  - Tile3
+  - Tile4
+  - Tile5
+  - Tile6
+  - Tile7
+  - Background
+  - BackgroundCamera
   layers:
   - Default
   - TransparentFX
