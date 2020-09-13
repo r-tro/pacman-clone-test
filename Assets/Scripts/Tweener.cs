@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +28,7 @@ public class Tweener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(activeTween.Target.position, activeTween.EndPos) > 0.05f)
+        if (Vector3.Distance(activeTween.Target.position, activeTween.EndPos) > (int)0.01)
         {
             float timeFraction = (Time.time - activeTween.StartTime) / activeTween.Duration;
             activeTween.Target.position = Vector3.Lerp(activeTween.StartPos, activeTween.EndPos, timeFraction);
