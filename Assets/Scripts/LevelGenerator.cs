@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
-{
+{ 
     public float TileSize;
     public Vector2 StartPoint;
     public int[,] levelMap =
