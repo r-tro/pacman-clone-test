@@ -37,25 +37,35 @@ public class InputManager : MonoBehaviour
         {
             //Debug.Log("looping");
             tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 0.0f, item.transform.localPosition.y - 1.18f, item.transform.localPosition.z + 0.0f), 1f);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.01f); //adjusted 0.1 longer than lerp time as float isn't accurate
             //Debug.Log("looping2");
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 3.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 1f);
-            yield return new WaitForSeconds(1);
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 3.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 2f);
+            yield return new WaitForSeconds(2.01f);
             //Debug.Log("looping3");
             tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 0.0f, item.transform.localPosition.y + 1.18f, item.transform.localPosition.z + 0.0f), 1f);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.01f);
             //Debug.Log("looping4");
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 3.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 1f);
-            yield return new WaitForSeconds(1);
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 3.08f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 2f);
+            yield return new WaitForSeconds(2.01f);
             //Debug.Log("looping5");
             yield return null;
         }
-        //ebug.Log("not looping, input detected");
+        //Debug.Log("not looping, input detected");
             yield break;
     }
 
     void CheckInput()
     {
+        if (Input.GetKeyDown("w")) //up
+        {
+            InputUsed = true;
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 0.0f, item.transform.localPosition.y + 1.0f, item.transform.localPosition.z + 0.0f), 1f);
+        }
+        if (Input.GetKeyDown("s")) //down
+        {
+            InputUsed = true;
+            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 0.0f, item.transform.localPosition.y - 1.0f, item.transform.localPosition.z + 0.0f), 1f);
+        }
         if (Input.GetKeyDown("a")) //left
         {
             InputUsed = true;
@@ -65,16 +75,6 @@ public class InputManager : MonoBehaviour
         {
             InputUsed = true;
             tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 1.0f, item.transform.localPosition.y + 0.0f, item.transform.localPosition.z + 0.0f), 1f);
-        }
-        if (Input.GetKeyDown("s")) //down
-        {
-            InputUsed = true;
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x + 0.0f, item.transform.localPosition.y - 1.0f, item.transform.localPosition.z + 0.0f), 1f);
-        }
-        if (Input.GetKeyDown("w")) //up
-        {
-            InputUsed = true;
-            tweener.AddTween(item.transform, item.transform.position, new Vector3(item.transform.localPosition.x - 0.0f, item.transform.localPosition.y + 1.0f, item.transform.localPosition.z + 0.0f), 1f);
         }
     }
 }
