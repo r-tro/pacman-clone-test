@@ -12,6 +12,8 @@ TagManager:
   - Tile5
   - Tile6
   - Tile7
+  - Background
+  - BackgroundCamera
   layers:
   - Default
   - TransparentFX
