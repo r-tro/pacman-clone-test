@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -137,7 +137,7 @@ public class LevelGenerator : MonoBehaviour
                             tileTopLeft.transform.Rotate(0f, 0f, 90f);
                             tileTopRight.transform.Rotate(0f, 0f, 90f);
                             tileBottomRight.transform.Rotate(0f, 0f, 90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 90f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, 90f); //
                         }
                     }
                     if (levelMap[i, j] == 3) // INSIDE CORNERS
@@ -147,42 +147,42 @@ public class LevelGenerator : MonoBehaviour
                             tileTopLeft.transform.Rotate(0f, 0f, 0f); 
                             tileTopRight.transform.Rotate(0f, 0f, -90f);
                             tileBottomRight.transform.Rotate(0f, 0f, -180f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, -270f);
                         }
                         if (j + 1 <= levelMap.GetLength(1) && ((levelMap[i, j - 1] == 3 || levelMap[i, j - 1] == 4) && j > 0)) // Top Right (INSIDE) Corner
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, -90f); 
                             tileTopRight.transform.Rotate(0f, 0f, 90f);
                             tileBottomRight.transform.Rotate(0f, 0f, 270f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, -270f);
                         }
                         if (j + 1 <= levelMap.GetLength(1) && ((levelMap[i - 1, j] == 3 || levelMap[i - 1, j] == 4) && levelMap[i + 1, j] != 4)) // Bottom Left (INSIDE) corner
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, 90f);
-                            tileTopRight.transform.Rotate(0f, 0f, 270f);
+                            tileTopRight.transform.Rotate(0f, 0f, -90f);
                             tileBottomRight.transform.Rotate(0f, 0f, 90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, -90f);
                         }
                         if (j + 1 <= levelMap.GetLength(1) && ((levelMap[i, j - 1] == 3 || levelMap[i, j - 1] == 4) && levelMap[i - 1, j] != 5)) // Bottom Right (INSIDE) corner
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, 180f);
                             tileTopRight.transform.Rotate(0f, 0f, -180f);
                             tileBottomRight.transform.Rotate(0f, 0f, 180f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, -180f);
                         }
                         if (levelMap[i, j] == 3 && (i == 10 && j == 8) || (i == 9 && j == 8)) // Inside Corner (out of bounds manual adjustment)
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, -90f);
                             tileTopRight.transform.Rotate(0f, 0f, 90f);
                             tileBottomRight.transform.Rotate(0f, 0f, -90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, 90f);
                         }
                         if (levelMap[i, j] == 3 && (i == 7 && j == 13)) // Inside Corner (out of bounds manual adjustment)
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, -180f);
                             tileTopRight.transform.Rotate(0f, 0f, -180f);
                             tileBottomRight.transform.Rotate(0f, 0f, -180f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, 180f);
                         }
                     }
                     if (levelMap[i, j] == 4) // INSIDE WALLS
@@ -192,14 +192,14 @@ public class LevelGenerator : MonoBehaviour
                             tileTopLeft.transform.Rotate(0f, 0f, 90f);
                             tileTopRight.transform.Rotate(0f, 0f, 90f);
                             tileBottomRight.transform.Rotate(0f, 0f, 90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, 90f); //
                         }
                         if (levelMap[i, j] == 4 && (i == 8 || i == 7 || i == 11 || i == 12) && j == 8) // Vertical Inside Wall (out of bounds manual adjustment)
                         {
                             tileTopLeft.transform.Rotate(0f, 0f, -90f);
                             tileTopRight.transform.Rotate(0f, 0f, -90f);
                             tileBottomRight.transform.Rotate(0f, 0f, -90f);
-                            tileBottomLeft.transform.Rotate(0f, 0f, 0f);
+                            tileBottomLeft.transform.Rotate(0f, 0f, -90f); //
                         }
                     }
                 }
