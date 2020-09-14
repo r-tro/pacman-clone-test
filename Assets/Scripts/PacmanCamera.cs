@@ -10,16 +10,20 @@ public class PacmanCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /* // main camera follows pacman or "player" tag 
         Camera.main.orthographic = true;
-        Camera.main.orthographicSize = 7.0f;
+        Camera.main.orthographicSize = 10.0f;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        */
     }
 
     void LateUpdate()
     {
+        /*
         Vector3 temp = transform.position;
         temp.x = playerTransform.position.x;
         temp.y = playerTransform.position.y;
         transform.position = temp;
+        */
     }
 }
