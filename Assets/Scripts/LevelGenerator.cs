@@ -40,12 +40,9 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(1920, 1080, false); //1920x1080, no fullscreen
-        TileSize = 1f; //change to sprite 1:1 scale
-        StartPoint = new Vector2(1f, 1f);
+        TileSize = 1f; // change to sprite's 1:1 scale size
+        StartPoint = new Vector2(1f, 1f); // start to build level from this posion (x, y)
         LevelMap();
-        //Transform Pacman = GameObject.Find("Pacman").transform;
-        //Pacman.transform.position = new Vector3(0,0,0);
     }
 
     // Update is called once per frame
@@ -60,26 +57,26 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int j = 0; j < levelMap.GetLength(1); j++) // row (x)
             {
-                Transform TopLeft = GameObject.Find("TopLeft").transform;
+                Transform TopLeft = GameObject.Find("TopLeft").transform; //Top Left of Map
                 GameObject prefab = Resources.Load("tile_" + levelMap[i, j].ToString()) as GameObject;
                 GameObject tileTopLeft = Instantiate(prefab) as GameObject;
                 tileTopLeft.transform.position = new Vector3(StartPoint.x + (TileSize * j), StartPoint.y - (TileSize * i), 0);
                 tileTopLeft.gameObject.tag = "Tile" + (levelMap[i, j].ToString());
                 tileTopLeft.transform.SetParent(TopLeft);
 
-                Transform TopRight = GameObject.Find("TopRight").transform;
+                Transform TopRight = GameObject.Find("TopRight").transform; //Top Right of Map
                 GameObject tileTopRight = Instantiate(prefab) as GameObject;
                 tileTopRight.transform.position = new Vector3((StartPoint.x + (((levelMap.GetLength(1) * 2) - 1) * TileSize)) - (TileSize * j), StartPoint.y - (TileSize * i), 0);
                 tileTopRight.gameObject.tag = "Tile" + (levelMap[i, j].ToString());
                 tileTopRight.transform.SetParent(TopRight);
 
-                Transform BottomRight = GameObject.Find("BottomRight").transform;
+                Transform BottomRight = GameObject.Find("BottomRight").transform; //Bottom Right of Map
                 GameObject tileBottomRight = Instantiate(prefab) as GameObject;
                 tileBottomRight.transform.position = new Vector3(StartPoint.x + (((levelMap.GetLength(1) * 2) - 1) * TileSize) - (TileSize * j), StartPoint.y - (((levelMap.GetLength(0) * 2) - 2) * TileSize) + (TileSize * i), 0);
                 tileBottomRight.gameObject.tag = "Tile" + (levelMap[i, j].ToString());
                 tileBottomRight.transform.SetParent(BottomRight);
 
-                Transform BottomLeft = GameObject.Find("BottomLeft").transform;
+                Transform BottomLeft = GameObject.Find("BottomLeft").transform; //Bottom Left of Map
                 GameObject tileBottomLeft = Instantiate(prefab) as GameObject;
                 tileBottomLeft.transform.position = new Vector3(StartPoint.x + (TileSize * j), StartPoint.y - (((levelMap.GetLength(0) * 2) - 2) * TileSize) + (TileSize * i), 0);
                 tileBottomLeft.gameObject.tag = "Tile" + (levelMap[i, j].ToString());
