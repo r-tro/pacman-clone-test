@@ -5,7 +5,6 @@ using UnityEngine;
 public class Tweener : MonoBehaviour
 {
     private Tween activeTween;
-    //private List<Tweener> activeTweens;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +17,6 @@ public class Tweener : MonoBehaviour
         if (activeTween == null)
         {
             activeTween = new Tween(targetObject, startPos, endPos, Time.time, duration);
-        }
-        else
-        {
-            //activeTween = null;
         }
     }
 

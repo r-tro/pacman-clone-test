@@ -15,6 +15,7 @@ TagManager:
   - Background
   - BackgroundCamera
   - Level
+  - Ghost
   layers:
   - Default
   - TransparentFX
